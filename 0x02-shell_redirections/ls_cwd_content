@@ -1,0 +1,15 @@
+total 52
+drwxrwxr-x 2 foued foued 4096 Feb  1 13:37 .
+drwxr-xr-x 6 foued foued 4096 Feb  1 12:49 ..
+-rw-r--r-- 1 foued foued    4 Feb  1 13:19 \
+-rwxrwxr-x 1 foued foued   36 Feb  1 11:19 0-hello_world
+-rwxrwxr-x 1 foued foued   34 Feb  1 11:41 1-confused_smiley
+-rwxrwxr-x 1 foued foued   29 Feb  1 11:45 2-hellofile
+-rwxrwxr-x 1 foued foued   40 Feb  1 11:48 3-twofiles
+-rwxrwxr-x 1 foued foued   35 Feb  1 11:54 4-lastlines
+-rw-r--r-- 1 foued foued   35 Feb  1 12:50 5-firstlines
+-rw-r--r-- 1 foued foued   40 Feb  1 13:12 6-third_line
+-rw-r--r-- 1 foued foued  192 Feb  1 13:27 7-file
+-rw-r--r-- 1 foued foued  917 Feb  1 12:53 iacta
+-rw-r--r-- 1 foued foued    0 Feb  1 13:37 ls_cwd_content
+-rwxrwxr-x 1 foued foued   36 Feb  1 10:33 README.md
