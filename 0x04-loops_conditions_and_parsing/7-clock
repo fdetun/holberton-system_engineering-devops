@@ -12,9 +12,4 @@ do
     done
     j=1
     i=$((i+1))
-    if [ $i -eq 12 ]
-    then
-    echo "Hour: $i"
-    break
-    fi
 done
