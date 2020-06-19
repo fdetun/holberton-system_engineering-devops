@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Displays the time for 12 hours and 59 minutes
 f=holbertonschool
-if [ -f "$f" ]
+if [ -e "$f" ]
     then
     echo "$f file exists"
     if [ -s "$f" ]
@@ -10,7 +10,10 @@ if [ -f "$f" ]
     else
         echo "$f file is empty"
     fi
-    echo "$f is a regular file"
+    if [ -f "$f" ]
+    then
+        echo "$f is a regular file"
+    fi
 else 
     echo "$f file does not exist"
 fi
