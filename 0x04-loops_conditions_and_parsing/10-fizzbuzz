@@ -11,7 +11,7 @@ elif [ $((i%3)) -eq 0 ]
     echo "Fizz"
 elif [ $((i%5)) -eq 0 ]
     then
-    echo "Bizz"
+    echo "Buzz"
 else
     echo "$i"
 fi
