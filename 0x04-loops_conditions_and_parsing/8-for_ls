@@ -2,5 +2,6 @@
 # This script is displaying files in the current directory
 for i in *
 do
-  echo "$i"
+  fde=$(echo "$i" | cut -d'-' -f 2)
+  echo "$fde"
 done
