@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# fizzbuzz
+IFS=':'
+while read -r a _ b _ _ path _
+do
+  echo "$a:$b:$path"
+done </etc/passwd
