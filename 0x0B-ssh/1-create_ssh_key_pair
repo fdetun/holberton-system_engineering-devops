@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# task0
+
+ssh-keygen  -f holberton -N betty -b 4096
