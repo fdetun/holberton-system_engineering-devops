@@ -14,7 +14,6 @@ sudo chmod 777 /var/www/html/*
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 printf %s "server {
         listen 80 default_server;
-	    root   /usr/share/nginx/html;
         error_page 404 /404.html;
         location = /404 {
                 root /usr/share/nginx/html;
