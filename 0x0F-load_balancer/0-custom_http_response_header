@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# task4
+
+sudo apt-get update
+sudo apt-get upgrate
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+printf %s "server {
+          location / {
+    add_header X-Served-By $HOSTNAME;}
+}"        > /etc/nginx/sites-available/default
+sudo service nginx restart
