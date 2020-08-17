@@ -5,6 +5,8 @@ sudo apt-get update
 sudo apt-get upgrate
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
+sudo chown -R "$USER":"$USER" /etc/nginx/*
+sudo chmod -R 755 /etc/nginx/sites-available/default
 printf %s "server {
           location / {
     add_header X-Served-By $HOSTNAME;}
