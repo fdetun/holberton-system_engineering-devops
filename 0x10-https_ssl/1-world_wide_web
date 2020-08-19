@@ -1,0 +1,16 @@
+#!/bin/bash
+# a recored test
+if [ "$2" ]
+then
+record=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F ":" '{print $NF}' | awk -F " " '{print $4}' | tail -c +2)
+resolve=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F ":" '{print $NF}' | awk -F " " '{print $NF}' | tail -c +2)
+echo The subdomain "$2" is a "$record" record and points to "$resolve"
+elif [ "$1" ] || [ -z "$2" ]
+then
+for i in "www" "lb-01" "web-01" "web-02"
+do
+a=$(dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk -F ":" '{print $NF}' | awk -F " " '{print $4}' | tail -c +2)
+b=$(dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk -F ":" '{print $NF}' | awk -F " " '{print $NF}' | tail -c +2)
+echo The subdomain "$i" is a "$a" record and points to "$b"
+done
+fi
