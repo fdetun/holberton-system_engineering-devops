@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # a recored test
 if [ "$2" ]
 then
