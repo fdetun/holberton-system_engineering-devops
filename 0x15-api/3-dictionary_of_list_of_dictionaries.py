@@ -14,10 +14,10 @@ def getfunc(url):
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/todos?userId="
     url2 = "https://jsonplaceholder.typicode.com/users"
-    arr = []
     my = {}
 
     for j in getfunc(url2):
+        arr = []
         for i in getfunc(url + str(j["id"])):
             mydict = {}
             mydict["task"] = i["title"]
@@ -25,5 +25,5 @@ if __name__ == "__main__":
             mydict["username"] = j["username"]
             arr.append(mydict)
         my[str(j["id"])] = arr
-    with open("todo_all_employees.json", 'w') as f:
-        json.dump(my, f)
+        with open("todo_all_employees.json", 'w') as f:
+            json.dump(my, f)
