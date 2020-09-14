@@ -2,7 +2,6 @@
 """gathering from json and exprong ot to csv"""
 import json
 import requests
-import sys
 
 
 def getfunc(url):
