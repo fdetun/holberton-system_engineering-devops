@@ -31,4 +31,4 @@ if __name__ == "__main__":
     print("Employee {} is done\
          with tasks({}/{}):".format(nam, len(arr), len(arr) + fal))
     for n in arr:
-        print("\t{} ".format(n))
+        print("\t{}".format(n))
