@@ -17,14 +17,13 @@ if __name__ == "__main__":
     arr = []
     my = {}
 
-    for j in range(len(getfunc(url2))):
-        for i in getfunc(url + str(getfunc(url2)[j]["id"])):
+    for j in getfunc(url2):
+        for i in getfunc(url + str(j["id"])):
             mydict = {}
             mydict["task"] = i["title"]
             mydict["completed"] = i["completed"]
-            ge = getfunc(url2)[j]
-            mydict["username"] = ge["username"]
+            mydict["username"] = j["username"]
             arr.append(mydict)
-        my[getfunc(url2)[j]["id"]] = arr
+        my[str(j["id"])] = arr
     with open("todo_all_employees.json", 'w') as f:
         json.dump(my, f)
