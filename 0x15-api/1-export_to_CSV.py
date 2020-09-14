@@ -13,7 +13,7 @@ def getfunc(url):
 
 
 if __name__ == "__main__":
-    num = int(sys.argv[1])
+    num = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/todos?userId={}".format(num)
     url2 = "https://jsonplaceholder.typicode.com/users?id={}".format(num)
     uname = getfunc(url2)[0]["username"]
