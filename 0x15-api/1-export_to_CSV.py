@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """gathering from json and exprong ot to csv"""
+import csv
 import requests
 import sys
-import csv
 
 
 def getfunc(url):
