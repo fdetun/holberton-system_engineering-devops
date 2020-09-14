@@ -20,12 +20,11 @@ if __name__ == "__main__":
     arr = []
     mydict = {"task": "", "completed": False, "username": uname}
     for i in getfunc(url):
-        for k, v in i.items():
-            if k == "title":
-                mydict["task"] = v
-            else:
-                mydict[k] = v
-            arr.append(mydict)
+        mydict = {}
+        mydict["task"] = i["title"]
+        mydict["completed"] = i["completed"]
+        mydict["username"] = uname
+        arr.append(mydict)
     my = {num: arr}
     with open(str(num) + ".json", 'w') as f:
         json.dump(my, f)
