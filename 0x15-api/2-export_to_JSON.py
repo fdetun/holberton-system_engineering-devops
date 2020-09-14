@@ -19,12 +19,13 @@ if __name__ == "__main__":
     uname = getfunc(url2)[0]["username"]
     arr = []
     mydict = {"task": "", "completed": False, "username": uname}
-    for k, v in getfunc(url)[0].items():
-        if k == "title":
-            mydict["task"] = v
-        else:
-            mydict[k] = v
-        arr.append(mydict)
+    for i in getfunc(url):
+        for k, v in i.items():
+            if k == "title":
+                mydict["task"] = v
+            else:
+                mydict[k] = v
+            arr.append(mydict)
     my = {num: arr}
     with open(str(num) + ".json", 'w') as f:
         json.dump(my, f)
