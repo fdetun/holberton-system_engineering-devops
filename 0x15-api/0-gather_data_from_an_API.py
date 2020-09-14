@@ -28,6 +28,7 @@ if __name__ == "__main__":
     for j in f2:
         if j["id"] == num:
             nam = j["name"]
-    print("Employee {} is done with tasks({}/{}):".format(nam, len(arr), len(arr) + fal))
+    print("Employee {} is done\
+         with tasks({}/{}):".format(nam, len(arr), len(arr) + fal))
     for n in arr:
         print("\t{} ".format(n))
