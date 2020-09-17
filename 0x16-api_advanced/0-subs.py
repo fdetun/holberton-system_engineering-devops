@@ -10,4 +10,7 @@ def number_of_subscribers(subreddit):
     useragent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     r = requests.get(url, headers={'User-agent': useragent})
-    return (r.json()["data"]['subscribers'])
+    try:
+        return (r.json()["data"]['subscribers'])
+    except:
+        return 0
