@@ -14,5 +14,5 @@ def top_ten(subreddit):
         f = r.json()["data"]['children']
         for i in f:
             print(i["data"]['title'])
-    except:
-        return 0
+    except BaseException:
+        print(None)
