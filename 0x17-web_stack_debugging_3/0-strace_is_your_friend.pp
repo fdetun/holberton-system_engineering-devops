@@ -7,5 +7,5 @@ exec {'fix wordpress setting file':
 exec {'restart apache2':
     user    => root,
     path    => '/bin',
-    command => "sudo service apache2 restart",
+    command => 'sudo service apache2 restart',
 }
