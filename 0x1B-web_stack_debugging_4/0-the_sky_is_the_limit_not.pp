@@ -1,11 +1,6 @@
-#0x1B-web_stack_debugging_4
+# there is no limit
 
-exec {'debugging':
-    path    => '/bin/',
-    command => 'sudo sed -i "s/-n 15/-n 4096/g" /etc/default/nginx',
-}
-
--> exec { 'nginx':
-    provider => 'shell',
-    command  => 'sudo service nginx restart',
+exec { 'limit vers l infini':
+provider => 'shell',
+command  => 'sudo sed -i "s/15/4096/g" /etc/default/nginx && service nginx restart',
 }
