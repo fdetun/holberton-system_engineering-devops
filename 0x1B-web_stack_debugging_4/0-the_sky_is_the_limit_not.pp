@@ -2,7 +2,7 @@
 exec {'debugging':
     user    => root,
     path    => '/bin/',
-    command => 'sudo sed -i \'s/ULIMIT.*/ULIMIT="-n 4096"/\' /etc/default/nginx',
+    command => 'sudo sed -i "s/-n 10000/-n 4096/g" /etc/default/nginx',
 }
 
 -> exec { 'nginx':
