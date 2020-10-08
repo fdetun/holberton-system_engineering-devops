@@ -2,5 +2,5 @@
 exec {'debugging':
     user    => root,
     provider => 'shell',
-    command => 'sudo sed -i 's/ULIMIT.*/ULIMIT="-n 10000"/' /etc/default/nginx && service nginx restart',
+    command => 'sudo sed -i 's/ULIMIT.*/ULIMIT="-n 4096"/' /etc/default/nginx && service nginx restart',
 }
