@@ -6,7 +6,7 @@ exec {'debugging':
 }
 
 -> exec { 'nginx':
-    user    => root,
+    user     => root,
     provider => 'shell',
-    command => 'sudo service nginx restart',
+    command  => 'sudo service nginx restart',
 }
