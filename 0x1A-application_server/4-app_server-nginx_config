@@ -8,7 +8,7 @@ server {
                                         proxy_read_timeout 86400;
 
         }
- location /api/c{
+ location /api/ {
                             proxy_pass http://0.0.0.0:5002;
                                         proxy_read_timeout 86400;
 
